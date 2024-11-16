@@ -51,9 +51,18 @@
 
         }
 
-        footer {
+        details{
             text-align: center;
-            margin-top: 30px;
+            line-height: 1.5em;
+        }
+        p{
+            font-family:'Times New Roman', Times, serif;
+            line-height: 1.5em;
+            margin-bottom: 20px;
+        }
+        footer{
+            text-align: center;
+            margin-top: 10px;
         }
         @media(min-width:400px) and (max-width:500px){
             #box{
@@ -77,9 +86,13 @@
 <body>
     <div id="box">
         <h1>Purbi Champaran</h1>
+        <div id="info">
+            <p>Get Information about the Panchayats of East Champaran's Sub-Divisions for Filling Teacher's Transfer Form.</p>
+
+        </div>
         <div class="item" id="banjariya">
             <h2>Banjariya</h2>
-            <button id="banjariya_map_button">Show Maps</button>
+            <button id="banjariya_map_button">Show Panchayats on Map</button>
             <iframe id="banjariya_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1HgE-8fhybIxIG_w5ADcf4A7udYfOS6o&ehbc=2E312F&" width="310"
                 height="480"></iframe>
@@ -93,7 +106,7 @@
         </div>
         <div class="item" id="kotwa">
             <h2>Kotwa</h2>
-            <button id="kotwa_map_button">Show Maps</button>
+            <button id="kotwa_map_button">Show Panchayats on Map</button>
 
             <iframe id="kotwa_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1KrNpe8F-mtaQ-2V37UzQWqjorCHfQKg&ehbc=2E312F" width="310"
@@ -107,7 +120,7 @@
 
         <div class="item" id="motihari">
             <h2>Motihari</h2>
-            <button id="motihari_map_button">Show Maps</button>
+            <button id="motihari_map_button">Show Panchayats on Map</button>
 
             <iframe id="motihari_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1AnHVpb2cOItAMuRfKc71Hdzdi6NFZxk&ehbc=2E312F" width="310"
@@ -121,7 +134,7 @@
 
         <div class="item" id="piprakothi">
             <h2>Piprakothi</h2>
-            <button id="piprakothi_map_button">Show Maps</button>
+            <button id="piprakothi_map_button">Show Panchayats on Map</button>
 
             <iframe id="piprakothi_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1m7oRUliHMknjK9k6oeDCUKCKVDiwwB4&ehbc=2E312F" width="310"
@@ -135,7 +148,7 @@
 
         <div class="item" id="suguali">
             <h2>Suguali</h2>
-            <button id="suguali_map_button">Show Maps</button>
+            <button id="suguali_map_button">Show Panchayats on Map</button>
 
             <iframe id="suguali_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1Kfykar-c1NiPH1xpNvIPrRWu5QmIv1k&ehbc=2E312F" width="310"
@@ -149,7 +162,7 @@
 
         <div class="item" id="turkaulia">
             <h2>Turkaulia</h2>
-            <button id="turkaulia_map_button">Show Maps</button>
+            <button id="turkaulia_map_button">Show Panchayats on Map</button>
 
             <iframe id="turkaulia_map" class="maps"
                 src="https://www.google.com/maps/d/embed?mid=1LcgfNoyhRtyLBzdqR1G7JQJIEYF4k7g&ehbc=2E312F" width="310"
@@ -162,8 +175,14 @@
         </div>
 
     </div>
+    <details id="detail1">
+        <summary>Help Others</summary>
+        Found this helpful?
+        <br>
+        Contribute <a href="https://docs.google.com/spreadsheets/d/1XGcGk2oUJL4rMY2DBrvmfFHGeDnmolPlBUDkfYtfCow/edit?gid=720885705#gid=720885705">here</a> and share useful details in the 'Notes' section.
+    </details>
     <footer>
-        sbhmprksh &copy; 2024
+        <a target="_blank" href="https://x.com/sbhm_prksh">sbhm_prksh</a> &copy; 2024
     </footer>
 
 
@@ -171,21 +190,23 @@
 <script>
     // Banjariya
     let banjariya_map_button = document.getElementById("banjariya_map_button")
+    let banjariya_map = document.getElementById("banjariya_map")
+    banjariya_map.style.display = 'none';
     banjariya_map_button.addEventListener('click', function run() {
-        let banjariya_map = document.getElementById("banjariya_map")
         if (banjariya_map.style.display === 'none') {
             banjariya_map.style.display = 'block';
-            banjariya_map_button.innerHTML = "Hide Maps"
+            banjariya_map_button.innerHTML = "Hide Map"
         }
         else {
             banjariya_map.style.display = 'none';
-            banjariya_map_button.innerHTML = "Show Maps"
+            banjariya_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let banjariya_detail_button = document.getElementById("banjariya_detail_button")
+    let banjariya_detail = document.getElementById("banjariya_detail")
+    banjariya_detail.style.display = 'none';
     banjariya_detail_button.addEventListener('click', function run() {
-        let banjariya_detail = document.getElementById("banjariya_detail")
         if (banjariya_detail.style.display === 'none') {
             banjariya_detail.style.display = 'block';
             banjariya_detail_button.innerHTML = "Hide Details"
@@ -198,21 +219,23 @@
     })
     // Kotwa
     let kotwa_map_button = document.getElementById("kotwa_map_button")
+    let kotwa_map = document.getElementById("kotwa_map")
+    kotwa_map.style.display = 'none';
     kotwa_map_button.addEventListener('click', function run() {
-        let kotwa_map = document.getElementById("kotwa_map")
         if (kotwa_map.style.display === 'none') {
             kotwa_map.style.display = 'block';
-            kotwa_map_button.innerHTML = "Hide Maps"
+            kotwa_map_button.innerHTML = "Hide Map"
         }
         else {
             kotwa_map.style.display = 'none';
-            kotwa_map_button.innerHTML = "Show Maps"
+            kotwa_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let kotwa_detail_button = document.getElementById("kotwa_detail_button")
+    let kotwa_detail = document.getElementById("kotwa_detail")
+    kotwa_detail.style.display = 'none';
     kotwa_detail_button.addEventListener('click', function run() {
-        let kotwa_detail = document.getElementById("kotwa_detail")
         if (kotwa_detail.style.display === 'none') {
             kotwa_detail.style.display = 'block';
             kotwa_detail_button.innerHTML = "Hide Details"
@@ -225,21 +248,23 @@
     })
     // Motihari
     let motihari_map_button = document.getElementById("motihari_map_button")
+    let motihari_map = document.getElementById("motihari_map")
+    motihari_map.style.display = 'none';
     motihari_map_button.addEventListener('click', function run() {
-        let motihari_map = document.getElementById("motihari_map")
         if (motihari_map.style.display === 'none') {
             motihari_map.style.display = 'block';
-            motihari_map_button.innerHTML = "Hide Maps"
+            motihari_map_button.innerHTML = "Hide Map"
         }
         else {
             motihari_map.style.display = 'none';
-            motihari_map_button.innerHTML = "Show Maps"
+            motihari_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let motihari_detail_button = document.getElementById("motihari_detail_button")
+    let motihari_detail = document.getElementById("motihari_detail")
+    motihari_detail.style.display = 'none';
     motihari_detail_button.addEventListener('click', function run() {
-        let motihari_detail = document.getElementById("motihari_detail")
         if (motihari_detail.style.display === 'none') {
             motihari_detail.style.display = 'block';
             motihari_detail_button.innerHTML = "Hide Details"
@@ -252,21 +277,23 @@
     })
     // Piprakothi
     let piprakothi_map_button = document.getElementById("piprakothi_map_button")
+    let piprakothi_map = document.getElementById("piprakothi_map")
+    piprakothi_map.style.display = 'none';
     piprakothi_map_button.addEventListener('click', function run() {
-        let piprakothi_map = document.getElementById("piprakothi_map")
         if (piprakothi_map.style.display === 'none') {
             piprakothi_map.style.display = 'block';
-            piprakothi_map_button.innerHTML = "Hide Maps"
+            piprakothi_map_button.innerHTML = "Hide Map"
         }
         else {
             piprakothi_map.style.display = 'none';
-            piprakothi_map_button.innerHTML = "Show Maps"
+            piprakothi_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let piprakothi_detail_button = document.getElementById("piprakothi_detail_button")
+    let piprakothi_detail = document.getElementById("piprakothi_detail")
+    piprakothi_detail.style.display = 'none';
     piprakothi_detail_button.addEventListener('click', function run() {
-        let piprakothi_detail = document.getElementById("piprakothi_detail")
         if (piprakothi_detail.style.display === 'none') {
             piprakothi_detail.style.display = 'block';
             piprakothi_detail_button.innerHTML = "Hide Details"
@@ -279,21 +306,23 @@
     })
     // suguali
     let suguali_map_button = document.getElementById("suguali_map_button")
+    let suguali_map = document.getElementById("suguali_map")
+    suguali_map.style.display = 'none';
     suguali_map_button.addEventListener('click', function run() {
-        let suguali_map = document.getElementById("suguali_map")
         if (suguali_map.style.display === 'none') {
             suguali_map.style.display = 'block';
-            suguali_map_button.innerHTML = "Hide Maps"
+            suguali_map_button.innerHTML = "Hide Map"
         }
         else {
             suguali_map.style.display = 'none';
-            suguali_map_button.innerHTML = "Show Maps"
+            suguali_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let suguali_detail_button = document.getElementById("suguali_detail_button")
+    let suguali_detail = document.getElementById("suguali_detail")
+    suguali_detail.style.display = 'none';
     suguali_detail_button.addEventListener('click', function run() {
-        let suguali_detail = document.getElementById("suguali_detail")
         if (suguali_detail.style.display === 'none') {
             suguali_detail.style.display = 'block';
             suguali_detail_button.innerHTML = "Hide Details"
@@ -305,21 +334,23 @@
     })
     // turkaulia
     let turkaulia_map_button = document.getElementById("turkaulia_map_button")
+    let turkaulia_map = document.getElementById("turkaulia_map")
+    turkaulia_map.style.display = 'none';
     turkaulia_map_button.addEventListener('click', function run() {
-        let turkaulia_map = document.getElementById("turkaulia_map")
         if (turkaulia_map.style.display === 'none') {
             turkaulia_map.style.display = 'block';
-            turkaulia_map_button.innerHTML = "Hide Maps"
+            turkaulia_map_button.innerHTML = "Hide Map"
         }
         else {
             turkaulia_map.style.display = 'none';
-            turkaulia_map_button.innerHTML = "Show Maps"
+            turkaulia_map_button.innerHTML = "Show Panchayats on Map"
         }
 
     })
     let turkaulia_detail_button = document.getElementById("turkaulia_detail_button")
+    let turkaulia_detail = document.getElementById("turkaulia_detail")
+    turkaulia_detail.style.display = 'none';
     turkaulia_detail_button.addEventListener('click', function run() {
-        let turkaulia_detail = document.getElementById("turkaulia_detail")
         if (turkaulia_detail.style.display === 'none') {
             turkaulia_detail.style.display = 'block';
             turkaulia_detail_button.innerHTML = "Hide Details"
