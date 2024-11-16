@@ -1,24 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #box {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .item {
+            border: 2px solid black;
+            margin-bottom: 6px;
+        }
+
+        .item h1 {
+            margin: 2px auto;
+        }
+
+        button {
+            width: 100px;
+            display: block;
+            padding: 2px;
+            margin: 2px 2px 2px 10px;
+            cursor: pointer;
+        }
+        iframe{
+            margin: 10px auto;
+        }
+        .maps{
+            display: none;
+        }
+        .details{
+            display: none;
+
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Banjariya</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1HgE-8fhybIxIG_w5ADcf4A7udYfOS6o&ehbc=2E312F&" width="640" height="480"></iframe>
-    <h1>Kotwa</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1KrNpe8F-mtaQ-2V37UzQWqjorCHfQKg&ehbc=2E312F" width="640" height="480"></iframe>
-    <h1>Motihari</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1AnHVpb2cOItAMuRfKc71Hdzdi6NFZxk&ehbc=2E312F" width="640" height="480"></iframe>
-    <h1>Piprakothi</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1m7oRUliHMknjK9k6oeDCUKCKVDiwwB4&ehbc=2E312F" width="640" height="480"></iframe>
-    <h1>Suguali</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1Kfykar-c1NiPH1xpNvIPrRWu5QmIv1k&ehbc=2E312F" width="640" height="480"></iframe>
-    <h1>Turkaulia</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1LcgfNoyhRtyLBzdqR1G7JQJIEYF4k7g&ehbc=2E312F" width="640" height="480"></iframe>
+    <div id="box">
+        <div class="item" id="banjariya">
+            <h2>Banjariya</h2>
+            <button id="banjariya_map_button">Show Maps</button>
+            <iframe id="banjariya_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1HgE-8fhybIxIG_w5ADcf4A7udYfOS6o&ehbc=2E312F&" width="350"
+            height="480"></iframe>
+
+            <button id="banjariya_detail_button">Show Details</button>
+            <iframe id="banjariya_detail" class="details" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="350"
+            height="375"></iframe>
+            
+            <!-- Detail will come here -->
+        </div>
+        <div class="item" id="kotwa">
+            <h2>Kotwa</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1KrNpe8F-mtaQ-2V37UzQWqjorCHfQKg&ehbc=2E312F"
+                width="350" height="480"></iframe>
+        </div>
+
+        <div class="item" id="motihari">
+            <h2>Motihari</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1AnHVpb2cOItAMuRfKc71Hdzdi6NFZxk&ehbc=2E312F"
+                width="350" height="480"></iframe>
+        </div>
+
+        <div class="item" id="piprakothi">
+            <h2>Piprakothi</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1m7oRUliHMknjK9k6oeDCUKCKVDiwwB4&ehbc=2E312F"
+                width="350" height="480"></iframe>
+        </div>
+
+        <div class="item" id="suguali">
+            <h2>Suguali</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Kfykar-c1NiPH1xpNvIPrRWu5QmIv1k&ehbc=2E312F"
+                width="350" height="480"></iframe>
+        </div>
+
+        <div class="item" id="turkaulia">
+            <h2>Turkaulia</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1LcgfNoyhRtyLBzdqR1G7JQJIEYF4k7g&ehbc=2E312F"
+                width="350" height="480"></iframe>
+        </div>
+
+    </div>
 
 
 </body>
+<script>
+    let banjariya_map_button = document.getElementById("banjariya_map_button")
+    banjariya_map_button.addEventListener('click', function run() {
+        let banjariya_map = document.getElementById("banjariya_map")
+        if (banjariya_map.style.display === 'none') {
+            banjariya_map.style.display = 'block';
+            banjariya_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            banjariya_map.style.display = 'none';
+            banjariya_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let banjariya_detail_button = document.getElementById("banjariya_detail_button")
+    banjariya_detail_button.addEventListener('click', function run() {
+        let banjariya_detail = document.getElementById("banjariya_detail")
+        if (banjariya_detail.style.display === 'none') {
+            banjariya_detail.style.display = 'block';
+            banjariya_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            banjariya_detail.style.display = 'none';
+            banjariya_detail_button.innerHTML = "Show Details"
+        }
+
+    })
+</script>
+
 </html>
