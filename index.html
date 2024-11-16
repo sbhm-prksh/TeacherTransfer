@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>East Champaran</title>
     <style>
         #box {
             text-align: center;
@@ -27,13 +27,16 @@
             margin: 2px 2px 2px 10px;
             cursor: pointer;
         }
-        iframe{
+
+        iframe {
             margin: 10px auto;
         }
-        .maps{
+
+        .maps {
             display: none;
         }
-        .details{
+
+        .details {
             display: none;
 
         }
@@ -45,43 +48,81 @@
         <div class="item" id="banjariya">
             <h2>Banjariya</h2>
             <button id="banjariya_map_button">Show Maps</button>
-            <iframe id="banjariya_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1HgE-8fhybIxIG_w5ADcf4A7udYfOS6o&ehbc=2E312F&" width="310"
-            height="480"></iframe>
+            <iframe id="banjariya_map" class="maps"
+                src="https://www.google.com/maps/d/embed?mid=1HgE-8fhybIxIG_w5ADcf4A7udYfOS6o&ehbc=2E312F&" width="310"
+                height="480"></iframe>
 
             <button id="banjariya_detail_button">Show Details</button>
-            <iframe id="banjariya_detail" class="details" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="310"
-            height="375"></iframe>
-            
+            <iframe id="banjariya_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
+
             <!-- Detail will come here -->
         </div>
         <div class="item" id="kotwa">
             <h2>Kotwa</h2>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1KrNpe8F-mtaQ-2V37UzQWqjorCHfQKg&ehbc=2E312F"
-                width="310" height="480"></iframe>
+            <button id="kotwa_map_button">Show Maps</button>
+
+            <iframe id="kotwa_map" class="maps"
+                src="https://www.google.com/maps/d/embed?mid=1KrNpe8F-mtaQ-2V37UzQWqjorCHfQKg&ehbc=2E312F" width="310"
+                height="480"></iframe>
+
+            <button id="kotwa_detail_button">Show Details</button>
+            <iframe id="kotwa_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
         </div>
 
         <div class="item" id="motihari">
             <h2>Motihari</h2>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1AnHVpb2cOItAMuRfKc71Hdzdi6NFZxk&ehbc=2E312F"
+            <button id="motihari_map_button">Show Maps</button>
+
+            <iframe id="motihari_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1AnHVpb2cOItAMuRfKc71Hdzdi6NFZxk&ehbc=2E312F"
                 width="310" height="480"></iframe>
+
+            <button id="motihari_detail_button">Show Details</button>
+            <iframe id="motihari_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
         </div>
 
         <div class="item" id="piprakothi">
             <h2>Piprakothi</h2>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1m7oRUliHMknjK9k6oeDCUKCKVDiwwB4&ehbc=2E312F"
+            <button id="piprakothi_map_button">Show Maps</button>
+
+            <iframe id="piprakothi_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1m7oRUliHMknjK9k6oeDCUKCKVDiwwB4&ehbc=2E312F"
                 width="310" height="480"></iframe>
+
+            <button id="piprakothi_detail_button">Show Details</button>
+            <iframe id="piprakothi_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
         </div>
 
         <div class="item" id="suguali">
             <h2>Suguali</h2>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1Kfykar-c1NiPH1xpNvIPrRWu5QmIv1k&ehbc=2E312F"
+            <button id="suguali_map_button">Show Maps</button>
+
+            <iframe id="suguali_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1Kfykar-c1NiPH1xpNvIPrRWu5QmIv1k&ehbc=2E312F"
                 width="310" height="480"></iframe>
+
+            <button id="suguali_detail_button">Show Details</button>
+            <iframe id="suguali_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
         </div>
 
         <div class="item" id="turkaulia">
             <h2>Turkaulia</h2>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1LcgfNoyhRtyLBzdqR1G7JQJIEYF4k7g&ehbc=2E312F"
+            <button id="turkaulia_map_button">Show Maps</button>
+
+            <iframe id="turkaulia_map" class="maps" src="https://www.google.com/maps/d/embed?mid=1LcgfNoyhRtyLBzdqR1G7JQJIEYF4k7g&ehbc=2E312F"
                 width="310" height="480"></iframe>
+
+            <button id="turkaulia_detail_button">Show Details</button>
+            <iframe id="turkaulia_detail" class="details"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSCbhu2zmJiIyqBNoSPcjzeqy6K5apSFnrzdupzdHossXm6FF1W8JN0cYIfGQuW4kq1kWrs50p5rAVk/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+                width="310" height="375"></iframe>
         </div>
 
     </div>
@@ -89,6 +130,7 @@
 
 </body>
 <script>
+    // Banjariya
     let banjariya_map_button = document.getElementById("banjariya_map_button")
     banjariya_map_button.addEventListener('click', function run() {
         let banjariya_map = document.getElementById("banjariya_map")
@@ -114,6 +156,139 @@
             banjariya_detail_button.innerHTML = "Show Details"
         }
 
+    })
+    // Kotwa
+    let kotwa_map_button = document.getElementById("kotwa_map_button")
+    kotwa_map_button.addEventListener('click', function run() {
+        let kotwa_map = document.getElementById("kotwa_map")
+        if (kotwa_map.style.display === 'none') {
+            kotwa_map.style.display = 'block';
+            kotwa_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            kotwa_map.style.display = 'none';
+            kotwa_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let kotwa_detail_button = document.getElementById("kotwa_detail_button")
+    kotwa_detail_button.addEventListener('click', function run() {
+        let kotwa_detail = document.getElementById("kotwa_detail")
+        if (kotwa_detail.style.display === 'none') {
+            kotwa_detail.style.display = 'block';
+            kotwa_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            kotwa_detail.style.display = 'none';
+            kotwa_detail_button.innerHTML = "Show Details"
+        }
+
+    })
+    // Motihari
+    let motihari_map_button = document.getElementById("motihari_map_button")
+    motihari_map_button.addEventListener('click', function run() {
+        let motihari_map = document.getElementById("motihari_map")
+        if (motihari_map.style.display === 'none') {
+            motihari_map.style.display = 'block';
+            motihari_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            motihari_map.style.display = 'none';
+            motihari_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let motihari_detail_button = document.getElementById("motihari_detail_button")
+    motihari_detail_button.addEventListener('click', function run() {
+        let motihari_detail = document.getElementById("motihari_detail")
+        if (motihari_detail.style.display === 'none') {
+            motihari_detail.style.display = 'block';
+            motihari_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            motihari_detail.style.display = 'none';
+            motihari_detail_button.innerHTML = "Show Details"
+        }
+
+    })
+    // Piprakothi
+    let piprakothi_map_button = document.getElementById("piprakothi_map_button")
+    piprakothi_map_button.addEventListener('click', function run() {
+        let piprakothi_map = document.getElementById("piprakothi_map")
+        if (piprakothi_map.style.display === 'none') {
+            piprakothi_map.style.display = 'block';
+            piprakothi_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            piprakothi_map.style.display = 'none';
+            piprakothi_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let piprakothi_detail_button = document.getElementById("piprakothi_detail_button")
+    piprakothi_detail_button.addEventListener('click', function run() {
+        let piprakothi_detail = document.getElementById("piprakothi_detail")
+        if (piprakothi_detail.style.display === 'none') {
+            piprakothi_detail.style.display = 'block';
+            piprakothi_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            piprakothi_detail.style.display = 'none';
+            piprakothi_detail_button.innerHTML = "Show Details"
+        }
+
+    })
+    // suguali
+    let suguali_map_button = document.getElementById("suguali_map_button")
+    suguali_map_button.addEventListener('click', function run() {
+        let suguali_map = document.getElementById("suguali_map")
+        if (suguali_map.style.display === 'none') {
+            suguali_map.style.display = 'block';
+            suguali_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            suguali_map.style.display = 'none';
+            suguali_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let suguali_detail_button = document.getElementById("suguali_detail_button")
+    suguali_detail_button.addEventListener('click', function run() {
+        let suguali_detail = document.getElementById("suguali_detail")
+        if (suguali_detail.style.display === 'none') {
+            suguali_detail.style.display = 'block';
+            suguali_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            suguali_detail.style.display = 'none';
+            suguali_detail_button.innerHTML = "Show Details"
+        }
+    })
+    // turkaulia
+    let turkaulia_map_button = document.getElementById("turkaulia_map_button")
+    turkaulia_map_button.addEventListener('click', function run() {
+        let turkaulia_map = document.getElementById("turkaulia_map")
+        if (turkaulia_map.style.display === 'none') {
+            turkaulia_map.style.display = 'block';
+            turkaulia_map_button.innerHTML = "Hide Maps"
+        }
+        else {
+            turkaulia_map.style.display = 'none';
+            turkaulia_map_button.innerHTML = "Show Maps"
+        }
+
+    })
+    let turkaulia_detail_button = document.getElementById("turkaulia_detail_button")
+    turkaulia_detail_button.addEventListener('click', function run() {
+        let turkaulia_detail = document.getElementById("turkaulia_detail")
+        if (turkaulia_detail.style.display === 'none') {
+            turkaulia_detail.style.display = 'block';
+            turkaulia_detail_button.innerHTML = "Hide Details"
+        }
+        else {
+            turkaulia_detail.style.display = 'none';
+            turkaulia_detail_button.innerHTML = "Show Details"
+        }
     })
 </script>
 
